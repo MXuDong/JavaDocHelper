@@ -1,5 +1,5 @@
 <idea-plugin>
-  <id>com.mxudong.doc_helper</id>
+  <id>com.mxudong.dochelper</id>
   <name>Java Doc Helper</name>
   <version>1.0</version>
   <vendor email="2941884109@qq.com" url="">MXuDong</vendor>
@@ -20,13 +20,13 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
-    <projectService serviceInterface="com.mxudong.doc_helper.BaseInterface"
-                    serviceImplementation="com.mxudong.doc_helper.impl.BaseInterfaceImpl"/>
+    <projectService serviceInterface="com.mxudong.dochelper.BaseInterface"
+                    serviceImplementation="com.mxudong.dochelper.impl.BaseInterfaceImpl"/>
   </extensions>
 
   <actions>
 
-    <action id="JavaDocHelper.Main" class="com.mxudong.doc_helper.actions.ProgramMain" text="Show Java Doc"
+    <action id="JavaDocHelper.Main" class="com.mxudong.dochelper.actions.ProgramMain" text="Show Java Doc"
             description="show now java doc">
       <add-to-group group-id="ToolsMenu" anchor="last"/>
       <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt J" second-keystroke="shift ctrl alt D"/>
