@@ -1,0 +1,36 @@
+<idea-plugin>
+  <id>com.mxudong.doc_helper</id>
+  <name>Java Doc Helper</name>
+  <version>1.0</version>
+  <vendor email="2941884109@qq.com" url="">MXuDong</vendor>
+
+  <description><![CDATA[
+      This plugin helps Java developers read JavaDOC documents in real time.</br>
+    ]]></description>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <projectService serviceInterface="com.mxudong.doc_helper.BaseInterface"
+                    serviceImplementation="com.mxudong.doc_helper.impl.BaseInterfaceImpl"/>
+  </extensions>
+
+  <actions>
+
+    <action id="JavaDocHelper.Main" class="com.mxudong.doc_helper.actions.ProgramMain" text="Show Java Doc"
+            description="show now java doc">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt J" second-keystroke="shift ctrl alt D"/>
+    </action>
+  </actions>
+
+</idea-plugin>
