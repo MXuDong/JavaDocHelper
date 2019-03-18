@@ -24,6 +24,10 @@
                     serviceImplementation="com.mxudong.dochelper.impl.BaseInterfaceImpl"/>
   </extensions>
 
+  <extensions defaultExtensionNs="com.intellij">
+    <toolWindow id="Show Java Doc" anchor="right" factoryClass="com.mxudong.dochelper.view.ShowDocHelper"/>
+  </extensions>
+
   <actions>
 
     <action id="JavaDocHelper.Main" class="com.mxudong.dochelper.actions.ProgramMain" text="Show Java Doc"
