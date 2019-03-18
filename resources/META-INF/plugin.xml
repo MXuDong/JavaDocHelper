@@ -17,13 +17,6 @@
   <depends>com.intellij.modules.lang</depends>
   -->
 
-
-  <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
-    <projectService serviceInterface="com.mxudong.dochelper.BaseInterface"
-                    serviceImplementation="com.mxudong.dochelper.impl.BaseInterfaceImpl"/>
-  </extensions>
-
   <extensions defaultExtensionNs="com.intellij">
     <toolWindow id="Show Java Doc" anchor="right" factoryClass="com.mxudong.dochelper.view.ShowDocHelper"/>
   </extensions>
