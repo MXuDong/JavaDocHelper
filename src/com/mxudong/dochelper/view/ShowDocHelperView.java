@@ -4,6 +4,7 @@ import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.ui.EditorTextField;
 
 import javax.swing.*;
+import java.io.IOException;
 
 /**
  * @author Dong
@@ -17,13 +18,12 @@ import javax.swing.*;
 public class ShowDocHelperView {
     private JPanel basePanel;
     private JScrollPane scrollPane;
-    private EditorTextField editorTextField;
+    private JEditorPane showPage;
 
 
     public ShowDocHelperView(ToolWindow toolWindow){
-        editorTextField.setOneLineMode(false);
-        editorTextField.setEnabled(false);
-        editorTextField.setText("Test\n<h1>测试</h1>");
+
+
 
     }
 

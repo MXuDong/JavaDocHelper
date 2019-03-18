@@ -12,7 +12,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="b521e" class="com.intellij.ui.EditorTextField" binding="editorTextField">
+          <component id="92e60" class="javax.swing.JEditorPane" binding="showPage">
             <constraints/>
             <properties/>
           </component>
