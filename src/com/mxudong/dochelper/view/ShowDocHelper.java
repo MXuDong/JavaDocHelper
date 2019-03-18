@@ -23,22 +23,23 @@ public class ShowDocHelper implements ToolWindowFactory {
         ContentFactory contentFactory = ContentFactory.SERVICE.getInstance();
         Content content = contentFactory.createContent(showDocHelperView.getContent(), "", false);
         toolWindow.getContentManager().addContent(content);
+
     }
 
     @Override
     public boolean shouldBeAvailable(@NotNull Project project) {
-        System.out.println(2);
-        return false;
+
+        return true;
     }
 
     @Override
     public void init(ToolWindow window) {
-        System.out.println(0);
+
     }
 
     @Override
     public boolean isDoNotActivateOnStart() {
-        System.out.println(1);
+
         return false;
     }
 }

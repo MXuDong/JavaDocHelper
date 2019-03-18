@@ -4,6 +4,8 @@ import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.ui.EditorTextField;
 
 import javax.swing.*;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.io.IOException;
 
 /**
@@ -21,13 +23,29 @@ public class ShowDocHelperView {
     private JEditorPane showPage;
 
 
-    public ShowDocHelperView(ToolWindow toolWindow){
+    public ShowDocHelperView(ToolWindow toolWindow) {
 
+        showPage.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
 
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                toolWindow.hide(new Runnable() {
+                    @Override
+                    public void run() {
+
+                    }
+                });
+
+            }
+        });
 
     }
 
-    public JPanel getContent(){
+    public JPanel getContent() {
         return basePanel;
     }
 }
