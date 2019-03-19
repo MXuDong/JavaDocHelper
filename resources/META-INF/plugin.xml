@@ -1,33 +1,34 @@
 <idea-plugin>
-  <id>com.mxudong.dochelper</id>
-  <name>Java Doc Helper</name>
-  <version>1.0</version>
-  <vendor email="2941884109@qq.com" url="">MXuDong</vendor>
+    <id>com.mxudong.javadochelper</id>
+    <name>Java Doc Helper</name>
+    <version>1.0</version>
+    <vendor email="2941884109@qq.com" url="">MXuDong</vendor>
 
-  <description><![CDATA[
+    <description><![CDATA[
       This plugin helps Java developers read JavaDOC documents in real time.</br>
     ]]></description>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="173.0"/>
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products
-  <depends>com.intellij.modules.lang</depends>
-  -->
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
 
-  <extensions defaultExtensionNs="com.intellij">
-    <toolWindow id="Show Java Doc" anchor="right" factoryClass="com.mxudong.dochelper.view.ShowDocHelper"/>
-  </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="Show Java Doc" anchor="right" factoryClass="com.mxudong.dochelper.view.ShowDocHelper"/>
+    </extensions>
 
-  <actions>
+    <actions>
 
-    <action id="JavaDocHelper.Main" class="com.mxudong.dochelper.actions.ProgramMain" text="Show Java Doc"
-            description="show now java doc">
-      <add-to-group group-id="ToolsMenu" anchor="last"/>
-      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt J" second-keystroke="shift ctrl alt D"/>
-    </action>
-  </actions>
+        <action id="JavaDocHelper.Main" class="com.mxudong.dochelper.actions.ProgramMain" text="Show Java Doc"
+                description="show now java doc">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt J"
+                               second-keystroke="shift ctrl alt D"/>
+        </action>
+    </actions>
 
 </idea-plugin>

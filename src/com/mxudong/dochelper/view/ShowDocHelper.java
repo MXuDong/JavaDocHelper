@@ -5,6 +5,7 @@ import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowFactory;
 import com.intellij.ui.content.Content;
 import com.intellij.ui.content.ContentFactory;
+import com.mxudong.dochelper.common.GetSetterManager;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -17,9 +18,13 @@ import org.jetbrains.annotations.NotNull;
  */
 
 public class ShowDocHelper implements ToolWindowFactory {
+
+
+
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
-        ShowDocHelperView showDocHelperView = new ShowDocHelperView(toolWindow);
+        ShowDocHelperView showDocHelperView = new ShowDocHelperView(toolWindow, project);
+        GetSetterManager.setShowDocHelperView(showDocHelperView);
         ContentFactory contentFactory = ContentFactory.SERVICE.getInstance();
         Content content = contentFactory.createContent(showDocHelperView.getContent(), "", false);
         toolWindow.getContentManager().addContent(content);
@@ -42,4 +47,5 @@ public class ShowDocHelper implements ToolWindowFactory {
 
         return false;
     }
+
 }

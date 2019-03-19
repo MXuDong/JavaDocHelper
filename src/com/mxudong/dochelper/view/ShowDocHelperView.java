@@ -1,7 +1,7 @@
 package com.mxudong.dochelper.view;
 
+import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
-import com.intellij.ui.EditorTextField;
 
 import javax.swing.*;
 import java.awt.event.FocusEvent;
@@ -23,7 +23,7 @@ public class ShowDocHelperView {
     private JEditorPane showPage;
 
 
-    public ShowDocHelperView(ToolWindow toolWindow) {
+    public ShowDocHelperView(ToolWindow toolWindow, Project project) {
 
         showPage.addFocusListener(new FocusListener() {
             @Override
@@ -47,5 +47,9 @@ public class ShowDocHelperView {
 
     public JPanel getContent() {
         return basePanel;
+    }
+
+    public void changeText(String text){
+        showPage.setText(text);
     }
 }
