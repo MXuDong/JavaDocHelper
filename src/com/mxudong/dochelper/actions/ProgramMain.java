@@ -29,8 +29,6 @@ public class ProgramMain extends AnAction {
     public void actionPerformed(@NotNull AnActionEvent e) {
         // TODO: insert action logic here
 
-        System.out.println("OK");
-
         Project project = e.getData(PlatformDataKeys.PROJECT);
         PsiFile psiFile = e.getData(CommonDataKeys.PSI_FILE);
         Editor editor = e.getData(CommonDataKeys.EDITOR);
