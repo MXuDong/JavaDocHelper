@@ -52,4 +52,8 @@ public class ShowDocHelperView {
     public void changeText(String text){
         showPage.setText(text);
     }
+
+    public String getText(){
+        return showPage.getText();
+    }
 }
