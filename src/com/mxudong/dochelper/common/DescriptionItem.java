@@ -1,5 +1,7 @@
 package com.mxudong.dochelper.common;
 
+import b.h.P;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -24,10 +26,12 @@ public class DescriptionItem {
         while (matcher.find()){
             int length = matcher.groupCount();
             for(int i = 0; i < length; i++){
-                result.append(matcher.group(i +1));
+                String line = matcher.group(i + 1);
+                line = line.replaceAll("<p>", "\n\n");
+                line = line.replaceAll("<\\\\p>", "\n\n");
+                result.append(line);
             }
         }
-
-        return result.toString();
+        return result.toString().replaceAll("\\{[^}]*}", " ");
     }
 }
